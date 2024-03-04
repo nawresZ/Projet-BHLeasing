@@ -1,0 +1,59 @@
+﻿@model ProjetBHLeasing.Models.Client
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.clientId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.clientId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.observations)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.observations)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.montant)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.montant)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dateReglement)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dateReglement)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dateAppel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dateAppel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.resultats)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.resultats)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.idAction)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.idAction)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-light" >Back to List</a>
+</div>

@@ -1,0 +1,138 @@
+﻿@model IEnumerable<ProjetBHLeasing.Models.Utilisateur>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id_user)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.login)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.abreviation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id_user_responsable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.statut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.b_modifier_ptf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date_derniers_acces)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id_user_modif)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date_user_creat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date_user_modif)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.matricule)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rib)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id_departement)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_user)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Profil.Designation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prenom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.login)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.abreviation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_user_responsable)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.statut)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.b_modifier_ptf)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date_derniers_acces)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_user_modif)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date_user_creat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date_user_modif)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.matricule)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rib)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_departement)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id_user">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.id_user">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id_user">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

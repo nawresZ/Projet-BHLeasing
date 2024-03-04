@@ -1,0 +1,74 @@
+﻿@model IEnumerable<ProjetBHLeasing.Models.Client>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<partial name="_Notification" />
+<!-- 
+<div class="d-flex justify-content-end">
+    <a asp-controller="Profils" asp-action="Create" class="btn btn-light mr-10">Ajouter un Profil</a>
+    <a asp-controller="Utilisateurs" asp-action="Create" class="btn btn-light ml-10">Ajouter un Utilisateur</a>
+</div>
+-->
+<br />
+
+<h1>Liste des clients</h1>
+<br />
+<form method="get">
+    <div class="form-group">
+        <label for="searchDate">Rechercher par date d'appel :</label>
+        <input type="date" id="searchDate" name="searchDate" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Rechercher</button>
+    <br />
+</form>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>IdClient</th>
+                <th>Observations</th>
+                <th>Montant</th>
+                <th>DateRéglement</th>
+                <th>DateAppel</th>
+                <th>IdSort</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.clientId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.observations)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.montant)
+                    </td>
+                    <td>
+                        @item.dateReglement?.ToString("yyyy/MM/dd")
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dateAppel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.resultats)
+                    </td>
+
+                    <td>
+
+                        <a asp-action="Details" asp-route-id="@item.IDrow" class="btn btn-info">Détails</a> |
+                        <a asp-action="Delete" asp-route-id="@item.IDrow" class="btn btn-danger">Supprimer</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

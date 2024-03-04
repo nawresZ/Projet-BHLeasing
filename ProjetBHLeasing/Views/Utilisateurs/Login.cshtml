@@ -1,0 +1,25 @@
+﻿@model ProjetBHLeasing.Models.Utilisateur
+
+
+
+
+<div class="text-center">
+    <h1 class="mb-4">Login</h1>
+
+    <form asp-action="Login" class="col-md-6 offset-md-3 p-4 rounded bg-light">
+        <div class="form-group">
+            <label asp-for="login">Login:</label>
+            <input asp-for="login" class="form-control" />
+            <span asp-validation-for="login" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="password">Password:</label>
+            <input asp-for="password" class="form-control" type="password" />
+            <span asp-validation-for="password" class="text-danger"></span>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+
+    <p class="mt-3">Don't have an account? <a asp-controller="Utilisateurs" asp-action="Create" class="text-primary">S'inscrire'</a></p>
+</div>

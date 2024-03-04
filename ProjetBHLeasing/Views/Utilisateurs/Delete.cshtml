@@ -1,0 +1,117 @@
+﻿@model ProjetBHLeasing.Models.Utilisateur
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Utilisateur</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prenom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prenom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.login)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.login)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.abreviation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.abreviation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.id_user_responsable)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.id_user_responsable)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.statut)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.statut)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.b_modifier_ptf)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.b_modifier_ptf)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.mail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.mail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.date_derniers_acces)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date_derniers_acces)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.id_user_modif)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.id_user_modif)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.date_user_creat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date_user_creat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.date_user_modif)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date_user_modif)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.matricule)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.matricule)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.rib)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.rib)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.id_departement)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.id_departement)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="id_user" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

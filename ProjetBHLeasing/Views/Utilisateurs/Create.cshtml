@@ -1,0 +1,106 @@
+﻿@model ProjetBHLeasing.Models.Utilisateur
+
+@{
+    ViewData["Title"] = "Create";
+}
+<h4>Utilisateur</h4>
+<hr />
+<div class="container">
+    <h1 class="text-center">S'inscrire</h1>
+
+    <form asp-action="Create" method="post" class="col-md-6 offset-md-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="id_user" class="control-label"></label>
+            <input asp-for="id_user" class="form-control" />
+            <span asp-validation-for="id_user" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="id_profil">Profil</label>
+            <select id="id_profil" name="id_profil" asp-items="@ViewBag.ProfilItems" class="form-control">
+                <option>selectionner</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="nom" class="control-label"></label>
+            <input asp-for="nom" class="form-control" />
+            <span asp-validation-for="nom" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Prenom" class="control-label"></label>
+            <input asp-for="Prenom" class="form-control" />
+            <span asp-validation-for="Prenom" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="login" class="control-label"></label>
+            <input asp-for="login" class="form-control" />
+            <span asp-validation-for="login" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="password" class="control-label"></label>
+            <input asp-for="password" class="form-control" />
+            <span asp-validation-for="password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="abreviation" class="control-label"></label>
+            <input asp-for="abreviation" class="form-control" />
+            <span asp-validation-for="abreviation" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="id_user_responsable" class="control-label"></label>
+            <input asp-for="id_user_responsable" class="form-control" />
+            <span asp-validation-for="id_user_responsable" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="statut" class="control-label"></label>
+            <input asp-for="statut" class="form-control" />
+            <span asp-validation-for="statut" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="b_modifier_ptf" class="control-label"></label>
+            <input asp-for="b_modifier_ptf" class="form-control" />
+            <span asp-validation-for="b_modifier_ptf" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="mail" class="control-label"></label>
+            <input asp-for="mail" class="form-control" />
+            <span asp-validation-for="mail" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="id_user_modif" class="control-label"></label>
+            <input asp-for="id_user_modif" class="form-control" />
+            <span asp-validation-for="id_user_modif" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="matricule" class="control-label"></label>
+            <input asp-for="matricule" class="form-control" />
+            <span asp-validation-for="matricule" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="rib" class="control-label"></label>
+            <input asp-for="rib" class="form-control" />
+            <span asp-validation-for="rib" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="id_departement" class="control-label"></label>
+            <input asp-for="id_departement" class="form-control" />
+            <span asp-validation-for="id_departement" class="text-danger"></span>
+        </div>
+        <br />
+
+        <div class="form-group">
+
+            <center><input type="submit" value="S'inscrire'" class="btn btn-primary" /></center>
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index">Voir liste des Utilisateurs</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

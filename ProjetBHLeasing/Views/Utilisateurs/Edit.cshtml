@@ -1,0 +1,106 @@
+﻿@model ProjetBHLeasing.Models.Utilisateur
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Utilisateur</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id_user" />
+            <div class="form-group">
+                <label asp-for="nom" class="control-label"></label>
+                <input asp-for="nom" class="form-control" />
+                <span asp-validation-for="nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prenom" class="control-label"></label>
+                <input asp-for="Prenom" class="form-control" />
+                <span asp-validation-for="Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="login" class="control-label"></label>
+                <input asp-for="login" class="form-control" />
+                <span asp-validation-for="login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="password" class="control-label"></label>
+                <input asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="abreviation" class="control-label"></label>
+                <input asp-for="abreviation" class="form-control" />
+                <span asp-validation-for="abreviation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="id_user_responsable" class="control-label"></label>
+                <input asp-for="id_user_responsable" class="form-control" />
+                <span asp-validation-for="id_user_responsable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="statut" class="control-label"></label>
+                <input asp-for="statut" class="form-control" />
+                <span asp-validation-for="statut" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="b_modifier_ptf" class="control-label"></label>
+                <input asp-for="b_modifier_ptf" class="form-control" />
+                <span asp-validation-for="b_modifier_ptf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mail" class="control-label"></label>
+                <input asp-for="mail" class="form-control" />
+                <span asp-validation-for="mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="date_derniers_acces" class="control-label"></label>
+                <input asp-for="date_derniers_acces" class="form-control" />
+                <span asp-validation-for="date_derniers_acces" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="id_user_modif" class="control-label"></label>
+                <input asp-for="id_user_modif" class="form-control" />
+                <span asp-validation-for="id_user_modif" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="date_user_creat" class="control-label"></label>
+                <input asp-for="date_user_creat" class="form-control" />
+                <span asp-validation-for="date_user_creat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="date_user_modif" class="control-label"></label>
+                <input asp-for="date_user_modif" class="form-control" />
+                <span asp-validation-for="date_user_modif" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="matricule" class="control-label"></label>
+                <input asp-for="matricule" class="form-control" />
+                <span asp-validation-for="matricule" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="rib" class="control-label"></label>
+                <input asp-for="rib" class="form-control" />
+                <span asp-validation-for="rib" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="id_departement" class="control-label"></label>
+                <input asp-for="id_departement" class="form-control" />
+                <span asp-validation-for="id_departement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
